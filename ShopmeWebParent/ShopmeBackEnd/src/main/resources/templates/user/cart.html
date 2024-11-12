@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+	integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/cart.css}">
+<title>Cart</title>
+</head>
+<body>
+	<div th:replace="fragment/header_footer :: header"></div>
+	
+	 <div class="container mb-5">
+        <h4 class="fw-bold" style="color: #76ABAE;">Giỏ hàng</h4>
+        <p class="text-muted">Sản phẩm bạn đã chọn</p>
+        <div class="d-flex">
+            <a href="" class="btn btn-dark me-3">Mua tất cả sản phẩm</a>
+            <h6 class="ms-3 mt-3">Tổng tiền <span>2.850.000₫</span></h6>
+        </div>
+
+        <hr>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Kích cỡ</th>
+                    <th>Màu sắc</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nike AF1 Low 'Triple White</td>
+                    <td><img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/413/335/products/duyetfashion-nike-air-force-1-07-white-315122-111-315115-112-duyet-fashion-1-jpeg.jpg?v=1634568391747"
+                            style="width: 100px; height: 100px" /></td>
+                    <td>38</td>
+                    <td>Trắng</td>
+
+                    <td>
+                        <input type="number" min="1" max="10" step="1" value="1"
+                            style="width: 50px; text-align: center;">
+                    </td>
+                    <td>2.850.000₫</td>
+                    <td>
+                        <button type="button" class="btn btn-dark">Hủy</button>
+                        <a href="" class="btn btn-dark me-2">Mua ngay</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+	
+</body>
+</html>
